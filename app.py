@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///blogly_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
-app.config['SECRET_KEY'] = 'folke'
+app.config['SECRET_KEY'] = 'Nada'
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 debug = DebugToolbarExtension(app)
 
@@ -55,6 +55,7 @@ def show_user_details(user_id):
 
     user = User.query.get_or_404(user_id)
     posts = Post.query.filter(Post.author_id == user_id).all()
+    
     return render_template('/users/user.html', user=user, posts=posts)
 
 @app.route('/users/<int:user_id>/edit')
