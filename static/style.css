@@ -1,0 +1,16 @@
+/* Define the styles for the dark theme */
+.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Override the default link colors */
+.dark-theme a {
+    color: #ffffff;
+}
+
+/* Define styles for the header */
+.dark-theme h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5
+}
